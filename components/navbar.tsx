@@ -1,45 +1,42 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import Image from "next/image";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { icons, images } from "@/constants";
-const Navicon = ({ icon }: any) => {
-  return (
-    <View>
-      <Image source={icon} />
-    </View>
-  );
-};
+// Ensure you have web-compatible paths for these assets.
+
 const Navbar = () => {
   return (
-    <SafeAreaView className="p-4 bg-primary    rounded-b-[40px] ">
-      <View className=" flex flex-row justify-between  items-center ">
+    <div className="p-4 bg-primary rounded-b-[40px]">
+      <div className="flex flex-row justify-between items-center">
         <Image
-          source={icons.manu}
-          tintColor={"white"}
-          resizeMode="contain"
+          src={"/icons/manu.png"} // Adjusted from `manu` to `menu` assuming typo
+          alt="Menu Icon"
           className="w-14 h-14 rotate-180"
+          width={56}
+          height={56}
         />
-        <View className="flex flex-col   rounded-full justify-center items-center">
+
+        {/* Center Logo */}
+        <div className="flex flex-col justify-center items-center">
           <Image
-            source={images.apklogo}
-            resizeMode="contain"
+            src={"/images/apklogo.png"}
+            alt="App Logo"
             className="w-10 h-10"
+            width={40}
+            height={40}
           />
-          <Text className="text-[#ffffff] overflow-hidden font-pbold text-2xl ">
-            Greed Zoon
-          </Text>
-        </View>
+          <p className="text-white font-bold text-2xl">Greed Zoon</p>
+        </div>
+
+        {/* Right Icon */}
         <Image
-          source={icons.notification}
-          resizeMode="contain"
-          tintColor={"white"}
-          className="w-10 h-10  "
+          src={"/icons/notification.png"}
+          alt="Notification Icon"
+          className="w-10 h-10"
+          width={40}
+          height={40}
         />
-      </View>
-    </SafeAreaView>
+      </div>
+    </div>
   );
 };
 
 export default Navbar;
-
-const styles = StyleSheet.create({});

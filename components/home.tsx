@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useSession } from "next-auth/react";
+import Navbar from "./navbar";
 
 interface GameData {
   id: string;
@@ -73,32 +74,22 @@ export default function Homepage({ data }: HomepageProps) {
 
   return (
     <div className="p-4">
-      <div className=" w-full">
+      <Navbar />
+      <div className="">
         <Slider {...settings}>
-          <div className=" h-52 relative overflow-hidden  rounded-2xl">
+          <div className=" h-60  w-20  relative  rounded-2xl">
             <Image
               src="/images/ff.png"
               alt="Garena Free Fire Banner"
               fill
-              style={{ objectFit: "cover" }}
               className="rounded-2xl"
             />
           </div>
-          <div className="w-full h-52 sm:h-60 md:h-64 lg:h-72 xl:h-80 relative overflow-hidden flex justify-center items-center rounded-2xl">
+          <div className=" h-60  w-20  relative  rounded-2xl">
             <Image
-              src="/images/bgmi.png"
-              alt="Battleground Mobile India Banner"
+              src="/images/ff.png"
+              alt="Garena Free Fire Banner"
               fill
-              style={{ objectFit: "cover" }}
-              className="rounded-2xl"
-            />
-          </div>
-          <div className="w-full h-52 sm:h-60 md:h-64 lg:h-72 xl:h-80 relative overflow-hidden flex justify-center items-center rounded-2xl">
-            <Image
-              src="/images/cod.png"
-              alt="Call Of Duty Banner"
-              fill
-              style={{ objectFit: "cover" }}
               className="rounded-2xl"
             />
           </div>

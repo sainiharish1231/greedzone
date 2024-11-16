@@ -1,0 +1,360 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    animation: shimmer 2s infinite;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  animation: shimmer 2s infinite;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+  animation: shimmer 2s infinite;
+  --tg-body-font-family: "Outfit", sans-serif;
+  --tg-heading-font-family: "Plus Jakarta Sans", sans-serif;
+  --tg-primary-color: #7910f2;
+  --tg-secondary-color: #11101d;
+  --tg-body-font-color: #40468a;
+  --tg-heading-font-color: #10121d;
+  --tg-paragraph-color: #d4d7f3;
+  --tg-body-font-size: 16px;
+  --tg-body-font-weight: 400;
+  --tg-heading-font-weight: 600;
+  --tg-body-line-height: 1.62;
+  --tg-heading-line-height: 1.2;
+  --tg-indigo: #4920e0c4;
+  --tg-purple: #4749d4;
+  --tg-green: #101d96;
+  --tg-teal: #322fe7a8;
+  --tg-cyan: #3a47f7ce;
+  --tg-black: #010314;
+}
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #7910f2d0;
+  cursor: pointer;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--tg-heading-font-family);
+
+  font-style: normal;
+  line-height: var(--tg-heading-line-height);
+  font-weight: var(--tg-heading-font-weight);
+  text-transform: inherit;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--tg-secondary-color);
+}
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: linear-gradient(
+    0deg,
+    var(--tg-primary-color) 0%,
+    var(--tg-green) 47.6%,
+    var(--tg-black) 99.23%
+  );
+}
+
+/* Intro Area ---------------------------------- */
+.intro-thumb1 {
+  position: relative;
+  text-align: center;
+  margin-top: -130px;
+}
+.intro-thumb1 img {
+  width: 276px;
+  height: 344px;
+  object-fit: contain;
+}
+.intro-thumb1:after {
+  content: "";
+  position: absolute;
+  width: 479.43px;
+  height: 71.62px;
+  background: linear-gradient(
+    0.41deg,
+    var(--tg-primary-color) 7.48%,
+    rgba(46, 32, 255, 0.27) 36.38%,
+    var(--tg-secondary-color) 67.11%
+  );
+  filter: blur(23px);
+  border-radius: 50%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: -1;
+}
+@media (max-width: 1199px) {
+  .intro-thumb1 {
+    margin-top: 70px;
+  }
+}
+
+.intro-wrap:not(:last-child) {
+  margin-bottom: 70px;
+}
+.intro-wrap .intro-wrap-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.intro-wrap .intro-wrap-title:before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: var(--tg-primary-color);
+  margin-right: 9px;
+}
+.intro-wrap .intro-wrap-text {
+  margin-bottom: -0.4em;
+}
+
+.slick-dots {
+  bottom: -25px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: white;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white;
+}
+.roadMap-active2 .col-lg-4 {
+  padding: 0 15px;
+}
+.roadmap-slider1 {
+  max-width: 1870px;
+  margin-right: -255px;
+  margin-left: auto;
+}
+
+@media (min-width: 1922px) {
+  .roadmap-slider1 {
+    max-width: 2114px;
+    margin-right: -180px;
+  }
+}
+@media (max-width: 1700px) {
+  .roadmap-slider1 {
+    margin-right: -370px;
+  }
+}
+@media (max-width: 1500px) {
+  .roadmap-slider1 {
+    margin-left: 55px;
+    margin-right: -440px;
+  }
+}
+@media (max-width: 1399px) {
+  .roadmap-slider1 {
+    max-width: 1388px;
+    margin-left: 20px;
+    margin-right: -180px;
+  }
+}
+@media (max-width: 1299px) {
+  .roadmap-slider1 {
+    max-width: 1328px;
+    margin-left: 35px;
+  }
+}
+@media (max-width: 1199px) {
+  .roadmap-slider1 {
+    max-width: 1110px;
+  }
+}
+@media (max-width: 991px) {
+  .roadmap-slider1 {
+    max-width: none;
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  .roadmap-slider1 {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 575px) {
+  .roadmap-slider1 {
+    margin: 40px -15px 0;
+    max-width: none;
+  }
+}
+.roadMap-active .col-lg-4 {
+  padding: 0 15px;
+}
+.roadmap-area {
+  overflow: hidden;
+}
+.roadmap-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 45px;
+  margin-left: 14px;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+}
+.roadmap-content {
+  border: 1px solid rgba(43 44 56 / 46%);
+  background: var(--tg-secondary-color);
+  border-radius: 15px;
+  padding: 75px 50px 65px;
+}
+.roadmap-content .title {
+  display: flex;
+
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  gap: 16px;
+}
+.roadmap-content .title .dot {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255 255 255 / 11%);
+  flex: 0 0 auto;
+  transform: translateY(3px);
+}
+
+.roadmap-content .title .dot::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+  bottom: 24px;
+  width: 2px;
+  height: 180px;
+  background: #37373f;
+}
+.roadmap-content p {
+  margin-bottom: 0;
+}
+@media (max-width: 1800px) {
+  .custom-container {
+    max-width: 1550px;
+  }
+  .contribution-shape-wrap img:nth-child(2) {
+    right: 8%;
+    bottom: 14%;
+  }
+  .roadmap-content {
+    padding: 75px 40px 65px;
+  }
+}
+/* Extra large devices (large desktops, 1800px and up) */
+@media (max-width: 1500px) {
+  .roadmap-content .title {
+    font-size: 25px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1199.98px) {
+  .roadmap-content {
+    padding: 75px 30px 40px;
+  }
+  .roadmap-title {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1800px) {
+  .custom-container {
+    max-width: 1550px;
+  }
+  .contribution-shape-wrap img:nth-child(2) {
+    right: 8%;
+    bottom: 14%;
+  }
+  .roadmap-content {
+    padding: 75px 40px 65px;
+  }
+}
+@keyframes spin-once {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.spin-once {
+  animation: spin-once 0.5s ease-in-out;
+}

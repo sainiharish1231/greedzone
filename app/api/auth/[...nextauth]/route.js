@@ -51,31 +51,6 @@ const handler = NextAuth({
         session.user.isAdmin = isAdmin;
       }
 
-      try {
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_HOST_URL}/user/register`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              name: session.user.name,
-              email: session.user.email,
-              password: "12345678",
-            }),
-          }
-        );
-
-        const result = await res.json();
-        console.log(result, "ssssssssssssssssssssssss");
-        if (!res.ok) {
-          throw new Error("User data saving failed.");
-        }
-      } catch (error) {
-        console.error("Error saving user data:", error);
-        alert("An error occurred while saving user data.");
-      }
       const sessionData = {
         ...session,
         ...session.user,

@@ -1,8 +1,8 @@
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 import AuthService from "../../../../services/AuthService";
-// const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
-// const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
+const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
+const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 const handler = NextAuth({
   debug: true,
   session: {
